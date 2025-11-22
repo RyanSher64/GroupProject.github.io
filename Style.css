@@ -1,3 +1,7 @@
 body {
-    background: linear-gradient(to right, green 33%, white 33%, white 66%, orange 66%);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#header{
+    background-color: #2e8538;
 }
