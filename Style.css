@@ -4,6 +4,7 @@ body {
 
 #header{
     width: 100%;
-    height: max-content;
+    height: 100%;
+    margin: 0;
     background-color: #2e8538;
 }
