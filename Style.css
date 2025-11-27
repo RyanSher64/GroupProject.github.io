@@ -1,3 +1,11 @@
 body {
-    background: linear-gradient(to right, green 33%, white 33%, white 66%, orange 66%);
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#header{
+    text-align: center;
+    padding: 5px 5px; 
+    background-color: #2e8538;
 }
