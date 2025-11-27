@@ -8,4 +8,11 @@ body {
     text-align: center;
     padding: 5px 5px; 
     background-color: #2e8538;
+    color: white;
+}
+
+#nav{
+    padding: 5px;
+    background-color: #eb6a00;
+    color: white;
 }
