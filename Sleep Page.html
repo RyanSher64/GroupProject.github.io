@@ -2,11 +2,88 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Sleep </title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Sleep</title>
+        <link rel="stylesheet" type="text/css" href="style/Style.css">
     </head>
     <body>
-        <p>This is the sleep page</p>
-        <a href="HomePage.html">Click here to return to the home page>
+        <div id="header">
+        <h1>Sleep Tracker</h1>
+        </div>
+        <p>Sleep is an esstential part of recovery for any athlete. It ensurees they perform their best and that is why we have included a sleep tracker with our health and fitness tracker.</p>
+        <img src="images/sleep.jpg">
+        <br>
+        <video width="320" height="240" controls>
+            <source src="media/How Sleep Affects Athletic Performance - Detroit Medical Center (720p, h264) (1).mp4" type="video/mp4">
+        </video>
+        <h2>Nightly Tracker</h2>
+        <p>Please enter how much sleep you had last night</p>
+        <input type="number" name="sleep" id="sleepHours" placeholder="Sleep in hours">
+        <br> 
+        <button onclick="goodSleep()" style="background-color: #eb6a00; color: white; border: none;">Send</button>
+        <br>
+        <p id="result"></p>
+        <br>
+
+        <table border>
+        <h2>Weekly Sleep Tracker</h2>
+        <tr>
+           <th>Day</th>
+           <th>Hours Slept</th>
+        </tr>
+        <tr>
+            <td>Monday</td>
+            <td>7 Hours 12 Minutes</td>
+        </tr>
+        <tr>
+            <td>Tuesday</td>
+            <td>6 hours 27 Minutes </td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td>6 Hours 45 Minutes</td>
+        </tr>
+        <tr>
+            <td>Thursday</td>
+            <td>8 Hours</td>
+        </tr>
+        <tr>
+            <td>Friday</td>
+            <td>7 Hours 24 Minutes</td>
+        </tr>
+        <tr>
+            <td>Staurday</td>
+            <td>9 Hours 14 Minutes</td>
+        </tr>
+        <tr>
+            <td>Friday</td>
+            <td>8 Hours 24 Minutes</td>
+        </tr>
+    </table>
+    <div id="nav">
+    <button><a href="HomePage.html">Home</button>
+    </div>
+
+        <script>
+            function goodSleep() {
+                let hours = document.getElementById("sleepHours").value;
+                let result = document.getElementById("result");
+
+                if (hours === "") {
+                    result.innerHTML = "Please enter a number.";
+                    return;
+                }
+
+                hours = parseInt(hours);
+
+                if (hours < 6) {
+                    result.innerHTML = "You need more sleep.";
+                } else if (hours >= 6 && hours <= 8) {
+                    result.innerHTML = "You had enough sleep.";
+                } else {
+                    result.innerHTML = "You had too much sleep";
+                }
+            }
+        </script>
     </body>
 </html>
+
